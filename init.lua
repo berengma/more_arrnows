@@ -9,14 +9,14 @@ rcbows.register_arrow("more_arrows:boom_arrow", {
 	},
 	drop = "more_arrows:inv_boom_arrow",
 	effects = {
-		explosion = { mod = "tnt", radius= 2, damage = 1, }, 
+		explosion = { mod = "tnt", radius= 2, damage = 7, }, 
 	}
 })
 
 
 rcbows.register_arrow("more_arrows:big_boom_arrow", {
 	projectile_texture = "more_arrows_proyectile_arrow",
-	damage = 7,
+	damage = 14,
 	inventory_arrow = {
 		name = "more_arrows:inv_big_boom_arrow",
 		description = "Big Boom Arrow",
@@ -24,7 +24,7 @@ rcbows.register_arrow("more_arrows:big_boom_arrow", {
 	},
 	drop = "more_arrows:inv_big_boom_arrow",
 	effects = {
-		explosion = { mod = "tnt", radius= 5, damage = 5, }, 
+		explosion = { mod = "tnt", radius= 5, damage = 14, }, 
 	}
 })
 
@@ -35,6 +35,16 @@ minetest.register_craft({
 	recipe = {
 		{"", "", "default:steel_ingot"},
 		{"", "default:torch", "tnt:tnt_stick"},
+		{"farming:cotton", "", ""},
+	}
+})
+
+minetest.register_craft({
+	output = "more_arrows:inv_big_boom_arrow 2",
+	type = "shaped",
+	recipe = {
+		{"", "", "default:steel_ingot"},
+		{"", "default:torch", "tnt:tnt"},
 		{"farming:cotton", "", ""},
 	}
 })
